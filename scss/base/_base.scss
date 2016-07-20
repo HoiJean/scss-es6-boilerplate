@@ -1,0 +1,32 @@
+
+/*------------------------------------*\
+  * #base
+  * Basic global styles.
+\*------------------------------------*/
+
+body {
+  margin-top: 30px;
+}
+
+/**
+ * Basic styles for links
+*/
+a {
+  color: $red;
+  text-decoration: none;
+
+  @include on-event {
+    color: $grey-border;
+    text-decoration: underline;
+  }
+}
+
+
+/**
+ * Alternative styles for links
+ * Uses `Specific Link States`.
+
+a {
+  @include _link(red, ('visited': $black, 'hover': green, 'focus': red, 'active': $yellow ));
+}
+*/

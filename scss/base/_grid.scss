@@ -1,0 +1,38 @@
+
+/*------------------------------------*\
+  * #grid
+  * Use the Susy grid
+\*------------------------------------*/
+
+$susy: (
+  container: 70em,
+  columns: 12,
+  gutters: 1,
+  debug: (
+    image: show,
+    color: green,
+    output: overlay,
+    toggle: top right,
+  )
+);
+
+body,
+main {
+  @include span(full);
+}
+
+// container for using the susy grid
+.content-block {
+  @include container(hide);
+  //@include show-grid(overlay);
+  position: relative;
+  padding: 10px;
+
+  @include susy-media(medium) {
+    padding: 0 20px;
+  }
+
+  @include susy-media(large) {
+    padding: 0 30px;
+  }
+}

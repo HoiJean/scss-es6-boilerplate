@@ -1,0 +1,35 @@
+
+/*------------------------------------*\
+  * #typography
+  * Basic typography styles.
+\*------------------------------------*/
+
+/**
+ * Global typography
+ */
+body {
+  color: $body-color;
+  font-weight: 400;
+  font-family: $text-font-stack;
+  text-size-adjust: 100%;
+}
+
+h1 {
+  @include headings(20px, $body-color, 1.875em);
+
+  @include susy-media(medium) {
+    margin-bottom: 30px;
+    font-size: 3em;
+  }
+}
+
+h2 {
+  @include headings(20px, $body-color, 1.375em);
+}
+
+p {
+  margin: 0 0 30px;
+  color: $body-color;
+  font-size: 1em;
+  line-height: 1.5em;
+}

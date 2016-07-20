@@ -1,0 +1,75 @@
+
+/*------------------------------------*\
+  * #variables
+  * Variables: fonts, colors, breakpoints
+\*------------------------------------*/
+
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Varela Round', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+
+
+
+/// white
+/// @type Color
+$white: rgb(255, 255, 255);
+
+/// black
+/// @type Color
+$black: rgb(0, 0, 0);
+
+/// Medium grey
+/// @type Color
+$grey: rgb(104, 107, 109);
+
+/// component navigation color
+/// @type Color
+$yellow: rgb(254, 219, 0);
+
+/// border color
+/// @type Color
+$grey-border: rgb(238, 238, 238);
+
+/// alert success
+/// @type Color
+$green: rgb(167, 207, 98);
+
+/// alert warning
+/// @type Color
+$red: rgba(158, 27, 27, 1);
+
+/// Body text color
+/// @type Color
+$body-color: $grey;
+
+
+
+
+/// Breakpoints handled by susy-media.
+$susy-media: (
+  small: 480px,
+  medium: 740px,
+  large: 960px,
+  string: 'screen and (orientation: landscape)',
+  pair: min-height 40em,
+  map: (
+    media: screen,
+    max-width: 30em
+  ),
+);
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

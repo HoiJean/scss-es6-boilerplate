@@ -1,0 +1,10 @@
+#node files
+/node_modules/*
+
+#/app/vendor/*
+#/dist/*
+
+#sass cache files
+.sass-cache
+
+.DS_Store

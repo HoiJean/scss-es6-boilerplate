@@ -1,0 +1,80 @@
+
+/*------------------------------------*\
+  * #mixins
+  * Custom @mixins
+\*------------------------------------*/
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+
+/// General heading properties
+/// @param {String} $margin-bottom
+/// @param {String} $color
+/// @param {String} $font-size
+@mixin headings($margin-bottom, $color, $font-size) {
+  margin-bottom: $margin-bottom;
+  color: $color;
+  font-weight: normal;
+  font-size: $font-size;
+  line-height: 1.125em;
+  @content;
+}
+
+/// Specific Link States
+/// Private link mixin that will compile only those link states declared
+/// or omit those whose color matches the basic link state color
+/// @param {String} $basic-state
+/// @param {String} $states
+@mixin _link($basic-state, $states) {
+  $same-props: ();
+  $states: map-merge((
+    'visited': $basic-state,
+    'hover': $basic-state,
+    'focus': $basic-state,
+    'active': $basic-state
+  ), $states);
+
+  &:link, #{$same-props} {
+    color: $basic-state;
+  }
+
+  @each $state, $color in $states {
+    @if ($basic-state != $color) {
+      &:#{$state} {
+        color: $color;
+      }
+    } @else {
+      $same-props: append($same-props, '&:#{$state}', 'comma');
+    }
+  }
+
+}

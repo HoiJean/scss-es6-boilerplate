@@ -1,0 +1,78 @@
+@charset 'UTF-8';
+
+/*------------------------------------*\
+  #MAIN
+\*------------------------------------*/
+
+/**
+ * CONTENTS
+ *
+ * SUSY.................Path to susy.
+ *
+ * SETTINGS
+ * Variables............Staring point for fonts, colors, breakpoints.
+ *
+ * TOOLS
+ * Functions............Some simple helper functions.
+ * Mixins...............Globally available mixins.
+ *
+ * GENERIC
+ * Box-sizing...........Better default `box-sizing`.
+ * Normalize.css........A level playing field.
+ * Reset................A pared back reset to remove margins.
+ *
+ * Base
+ * Base.................Basic global styles.
+ * Fonts................All @font-face declarations inc icon-fonts.
+ * Grid.................This file defines the susy grid.
+ * Helpers..............CSS helper classes.
+ * TYpography...........Basic typography styles.
+ *
+ * COMPONENTS
+ * Button...............Button styles.
+ * Skip-link............Skip to main content link styles.
+ * Header...............Page header styles.
+ * Footer...............Page footer styles.
+ *
+ * PAGES
+ * Home.................Page specific styles to home.
+ *
+ */
+
+// SUSY
+@import
+  '../app/vendor/susy/sass/susy';
+
+// Settings
+@import
+  'settings/variables';
+
+// Tools
+@import
+  'tools/functions',
+  'tools/mixins';
+
+// Generic
+@import
+  'generic/box-sizing',
+  'generic/normalize',
+  'generic/reset';
+
+// Base
+@import
+  'base/base',
+  'base/fonts',
+  'base/grid',
+  'base/helpers',
+  'base/typography';
+
+// Components
+@import
+  'components/button',
+  'components/skip-link',
+  'components/header',
+  'components/footer';
+
+// Pages
+@import
+  'pages/home';

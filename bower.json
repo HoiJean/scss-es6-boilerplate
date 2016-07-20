@@ -1,0 +1,24 @@
+{
+  "name": "susy",
+  "description": "susy portable",
+  "main": "app.js",
+  "authors": [
+    "mbarnard"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "susy"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "susy": "^2.2.12",
+    "matchMedia": "^0.3.0"
+  }
+}

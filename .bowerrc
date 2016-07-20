@@ -1,0 +1,6 @@
+{
+  "analytics": false,
+  "directory": "app/vendor/",
+  "timeout": 50000,
+  "strict-ssl": false
+}
