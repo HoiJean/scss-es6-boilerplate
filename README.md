@@ -1,6 +1,6 @@
 # Sass boilerplate with Browserify and Gulp
 
-##### My personal boilerplate for Sass, ES6 and HTML5.
+#### My personal boilerplate for Sass, ES6 and HTML5.
 
 ## Features
 
