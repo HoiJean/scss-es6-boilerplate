@@ -189,7 +189,7 @@ gulp.task('watch', ['build-vendor', 'build-app', 'linter', 'sass', 'scss-lint'],
   gulp.watch("app/**/*.html").on('change', browserSync.reload);
 });
 
-// tasks for distribution of html/js/css/fonts
+// tasks for distribution of html/js/css/json
 
 gulp.task('dist-ajax', function() {
   return gulp
